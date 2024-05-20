@@ -1,0 +1,24 @@
+[
+    {
+      "Model": "Toyota Camry",
+      "Brand": "Toyota",
+      "Description": "A reliable family sedan with spacious interior.",
+      "ReservedCount": 0,
+      "ImageUrl": "/Images/toyota camry.png"
+    },
+    {
+      "Model": "Honda Civic",
+      "Brand": "Honda",
+      "Description": "A fuel-efficient compact car known for its sporty design.",
+      "ReservedCount": 0,
+      "ImageUrl": "/Images/Honda Civic.jpg"
+    },
+    {
+      "Model": "Ford Mustang",
+      "Brand": "Ford",
+      "Description": "A legendary American muscle car with powerful performance.",
+      "ReservedCount": 0,
+      "ImageUrl": "/Images/Ford Mustang.jpg"
+    }
+  ]
+  

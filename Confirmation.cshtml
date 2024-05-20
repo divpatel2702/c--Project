@@ -1,0 +1,16 @@
+@page
+@model ConfirmationModel
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<div class="container">
+    <h1>Reservation Successful</h1>
+    <p>You have successfully reserved the @Model.Car for @Model.User.</p>
+    <ul>
+    <li>Car ID: @Model.Car</li>
+    <li>User Name: @Model.User</li>
+    
+</ul>
+    <a asp-page="/Index">Back to Home</a>
+</div>

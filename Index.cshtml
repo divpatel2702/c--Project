@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <h1>@Model.CarRentalStoreName</h1>
+    <p>Address: University Ave, Waterloo</p>
+    <p>Phone: 985-659-9856</p>
+    <div class="col-md-4 text-right">
+            <a asp-page="/Login" class="btn btn-primary mr-2">Login</a>
+            <a asp-page="/Reservations" class="btn btn-secondary">Show Reservations</a>
+        </div>
+
+    <div class="row">
+        @foreach (var car in Model.AvailableCars)
+        {
+            <div class="col-sm-4">
+                <div class="card mb-4" style="width: 18rem;">
+                    <img class="card-img-top img-fluid" src="@car.ImageUrl" alt="Car Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@car.Model</h5>
+                        <p class="card-text">@car.Brand</p>
+                        <p class="card-text">@car.Description</p>
+                        <p class="card-text">Reserved Count: @car.ReservedCount</p>
+                        <a href="/Reserve" class="btn btn-primary">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

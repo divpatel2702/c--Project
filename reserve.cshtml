@@ -1,0 +1,38 @@
+@page
+@model ReserveModel
+@{
+    ViewData["Title"] = "Reserve";
+}
+
+<div class="container">
+    <h1>Reservation Form</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="car">Car:</label>
+            <select class="form-control" id="car" asp-for="SelectedCar">
+                <option value="">Select a car</option>
+                @foreach (var car in Model.AvailableCars)
+                {
+                    <option value="@car.Model">@car.Model - @car.Brand</option>
+                }
+            </select>
+            <span asp-validation-for="SelectedCar" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserName">Name:</label>
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ContactInfo">Contact Information:</label>
+            <input asp-for="ContactInfo" class="form-control" />
+            <span asp-validation-for="ContactInfo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="reservationDateTime">Reservation Date/Time:</label>
+            <input type="datetime-local" id="reservationDateTime" name="ReservationDateTime" class="form-control" />
+            <span asp-validation-for="ReservationDateTime" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Reserve</button>
+    </form>
+</div>

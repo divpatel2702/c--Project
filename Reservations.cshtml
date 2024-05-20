@@ -1,0 +1,27 @@
+@page
+@model ReservationsModel
+@{
+    ViewData["Title"] = "Reservations";
+}
+
+<h1>All Reservations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Car Model</th>
+            <th>Date/Time</th>
+            <th>User Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model.ReservationList)
+        {
+            <tr>
+                <td>@reservation.CarModel</td>
+                <td>@reservation.DateTime</td>
+                <td>@reservation.UserInfo</td>
+            </tr>
+        }
+    </tbody>
+</table>
